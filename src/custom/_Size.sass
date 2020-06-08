@@ -10,3 +10,12 @@
   height: 100vh
 .vw-100
   width: 100vw
+
+.box
+  width: 100%
+
+$media_points: ( 576: 540, 768: 720, 992: 960 )
+@each $p, $q in $media_points
+  @media (min-width: #{$p}px)
+    .box
+      max-width: #{$q}px

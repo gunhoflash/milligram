@@ -2,56 +2,38 @@
 // Spacing
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.m-auto
-  margin: auto
-.mx-auto
-  margin-left: auto
-  margin-right: auto
-.ml-auto
-  margin-left: auto
-.mr-auto
-  margin-right: auto
-.my-auto
-  margin-top: auto
-  margin-bottom: auto
-.mt-auto
-  margin-top: auto
-.mb-auto
-  margin-bottom: auto
+$spacing_sizes: ( auto: auto, 0: 0, 1: 0.5rem, 2: 1rem, 3: 2rem, 4: 4rem )
 
-.m-0
-  margin: 0
-.mx-0
-  margin-left: 0
-  margin-right: 0
-.ml-0
-  margin-left: 0
-.mr-0
-  margin-right: 0
-.my-0
-  margin-top: 0
-  margin-bottom: 0
-.mt-0
-  margin-top: 0
-.mb-0
-  margin-bottom: 0
-
-$n: 1
-@for $i from 1 to 5
-  .m-#{$i}
-    margin: 0.5rem * $n
-  .mx-#{$i}
-    margin-left: 0.5rem * $n
-    margin-right: 0.5rem * $n
-  .ml-#{$i}
-    margin-left: 0.5rem * $n
-  .mr-#{$i}
-    margin-right: 0.5rem * $n
-  .my-#{$i}
-    margin-top: 0.5rem * $n
-    margin-bottom: 0.5rem * $n
-  .mt-#{$i}
-    margin-top: 0.5rem * $n
-  .mb-#{$i}
-    margin-bottom: 0.5rem * $n
-  $n: $n * 2
+@each $k, $v in $spacing_sizes
+  .m-#{$k}
+    margin: #{$v}
+  .mx-#{$k}
+    margin-left: #{$v}
+    margin-right: #{$v}
+  .ml-#{$k}
+    margin-left: #{$v}
+  .mr-#{$k}
+    margin-right: #{$v}
+  .my-#{$k}
+    margin-top: #{$v}
+    margin-bottom: #{$v}
+  .mt-#{$k}
+    margin-top: #{$v}
+  .mb-#{$k}
+    margin-bottom: #{$v}
+  .p-#{$k}
+    padding: #{$v}
+  .px-#{$k}
+    padding-left: #{$v}
+    padding-right: #{$v}
+  .pl-#{$k}
+    padding-left: #{$v}
+  .pr-#{$k}
+    padding-right: #{$v}
+  .py-#{$k}
+    padding-top: #{$v}
+    padding-bottom: #{$v}
+  .pt-#{$k}
+    padding-top: #{$v}
+  .pb-#{$k}
+    padding-bottom: #{$v}
